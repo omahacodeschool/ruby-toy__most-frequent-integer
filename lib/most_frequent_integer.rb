@@ -3,7 +3,8 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-  h = create_collection_of_integers(arr)
-  num = h.max_by{|k,v| v}
+    num = {}
+  num = arr.max_by{|k,v| v}
   return num.first
 end
+
