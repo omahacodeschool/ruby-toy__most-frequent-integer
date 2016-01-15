@@ -20,8 +20,8 @@ def create_collection_of_numbers(nums)
   return h
 end
 
-def find_most_repeated_number(nums)
+def find_most_frequent_integer(nums)
   h = create_collection_of_numbers(nums)
-  arr = h.max_by{|k,v| v}
+  arr = h.sort_by{|k,v| v}
   return arr.first
 end
