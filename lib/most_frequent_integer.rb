@@ -22,6 +22,11 @@ end
 
 def find_most_frequent_integer(nums)
   h = create_collection_of_numbers(nums)
-  arr = h.sort_by{|k,v| v}
+  arr = h.max_by{|k,v| v}
   return arr.first
 end
+
+
+#Figure out what the highest frequency in that hash is.
+#Figure out if more than one element in the hash has that frequency. Because it more than one does, then there's a tie and you should return nil.
+#If only one element in the hash has that frequency, find it and return it.
