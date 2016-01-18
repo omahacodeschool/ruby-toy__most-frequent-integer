@@ -3,6 +3,9 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-arr.detect{ |e| arr.count(e) >= 1}
+arr.group_by do |e|
+    e
+  end.values.max_by(&:size).first
 end
 
+print most_common_value(arr)
