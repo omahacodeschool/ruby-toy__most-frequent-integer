@@ -8,4 +8,4 @@ arr.group_by do |e|
   end.values.max_by(&:size).first
 end
 
-print most_common_value(arr)
+print find_most_frequent_integer(arr)
