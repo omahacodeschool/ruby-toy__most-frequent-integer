@@ -3,5 +3,21 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-  # put your code here
+  n = Hash.new(0)
+  return_arr = []
+  freq = 0
+  
+  arr.each do |element|
+    n[element] += 1
+  end
+  n.each_pair { |k,v| 
+    if v > freq
+      freq = v
+      return_arr.clear << k
+    elsif v == freq
+      return_arr = nil 
+    end
+  }
+  return return_arr
 end
+  
