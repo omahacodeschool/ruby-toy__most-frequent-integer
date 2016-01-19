@@ -15,9 +15,10 @@ def find_most_frequent_integer(arr)
       freq = v
       return_arr.clear << k
     elsif v == freq
-      return_arr = nil 
+      return_arr = [] 
     end
   }
   return return_arr
 end
+  
   
