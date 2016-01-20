@@ -3,9 +3,15 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-arr.group_by do |e|
-    e
-  end.values.max_by(&:size).first
+  counter = Hash.new(0)
+  arr.each do |i|
+    counter[i] += 1
+  end
+  array = []
+  counter.each do |k, v|
+    if v == counter.values.max
+      array << k
+    end
+  end
+  array.sort
 end
-
-print find_most_frequent_integer(arr)
