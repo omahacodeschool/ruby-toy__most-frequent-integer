@@ -13,5 +13,5 @@ def find_most_frequent_integer(arr)
       array << k
     end
   end
-  array.sort
+  array.to_s
 end
