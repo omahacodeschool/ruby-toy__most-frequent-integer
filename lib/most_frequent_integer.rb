@@ -3,5 +3,10 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-  # put your code here
+  new_arr = arr.group_by { |i| i }.values
+  most_frequent = new_arr.sort_by { |v| v.length }.reverse
+  unless most_frequent[0].length == most_frequent[1].length
+    return most_frequent.first[0]
+  end
 end
+
