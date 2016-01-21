@@ -5,11 +5,15 @@
 def find_most_frequent_integer(arr)
     new_array=[]
     final_array=[]
+    if arr.uniq.length==0
+    return nil
+    else
     array_to_use=arr.uniq
       array_to_use.each do |x| 
       new_array << [arr.count(x), x]
       final_array=new_array.sort
- end
+  end
+    end
  count_array=[]
  final_array.each do |x|
      count_array << x.reverse
@@ -24,3 +28,5 @@ def find_most_frequent_integer(arr)
      return final_array[-1][1]
   end
 end
+
+find_most_frequent_integer([1, 1, 1, 4, 5, 2])
