@@ -31,7 +31,7 @@ end
 def find_most_frequent_integer(nums)
   h = find_max_integer(nums)
   if h.length == 1
-    return h.keys
+    return h.keys[0]
   elsif h.length != 1
     return nil
   end
