@@ -3,5 +3,10 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-  # put your code here
+    h = Hash.new
+    arr.each do |i|
+        x = arr.count(i)
+        h["#{i}"] = "#{x}"
+    end
+    return h.max_by{|k,v| v}[0] ##key--integer; value--quantity
 end
