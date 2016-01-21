@@ -22,8 +22,8 @@ end
 
 def find_most_frequent_integer(nums)
   h = create_collection_of_numbers(nums)
-  arr = h.max_by{|k,v| v}
-  return arr.first
+  max = h.values.max
+  Hash[h.select { |k, v| v == max}]
 end
 
 
