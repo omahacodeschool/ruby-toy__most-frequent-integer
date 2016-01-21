@@ -22,13 +22,12 @@ end
 
 def find_most_frequent_integer(nums)
   h = create_collection_of_numbers(nums)
-  arr = []
+  #arr = []
   max = h.values.max
   Hash[h.select { |k, v| v == max}]
-  #i want to add the keys from this hash to 'arr'
-  if h has only one key/value pair == true
+  if h.length == 1
     return h.keys
-  elsif h has only one key/value pair != true
+  elsif h.length != 1
     return nil
   end
 end
