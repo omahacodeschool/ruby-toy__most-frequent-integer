@@ -20,11 +20,16 @@ def create_collection_of_numbers(nums)
   return h
 end
 
-def find_most_frequent_integer(nums)
+def find_max_integer(nums)
   h = create_collection_of_numbers(nums)
-  #arr = []
+  max_hash= {}
   max = h.values.max
-  Hash[h.select { |k, v| v == max}]
+  max_hash = Hash[h.select { |k, v| v == max}]
+  return max_hash
+end
+  
+def find_most_frequent_integer(nums)
+  h = find_max_integer(nums)
   if h.length == 1
     return h.keys
   elsif h.length != 1
