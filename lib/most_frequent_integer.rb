@@ -8,10 +8,9 @@ arr.each { |int| occurances[int] +=1}
 #puts occurances
 occur_most = occurances.values.max
 final = occurances.select { |k, v| v == occur_most }.keys
-#puts final
-if final.length == 1
-      return final
+   if final.length == 1
+      return final[0]
    else
       return nil
-end
+   end
 end
