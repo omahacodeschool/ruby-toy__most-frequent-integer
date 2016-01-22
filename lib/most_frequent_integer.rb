@@ -14,6 +14,6 @@ def find_most_frequent_integer(arr)
     if k.count > 1
         return nil
     else
-        return #{k}
+        return k
     end
  end
