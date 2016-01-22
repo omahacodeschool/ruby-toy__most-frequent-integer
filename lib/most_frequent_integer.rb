@@ -7,6 +7,8 @@ def find_most_frequent_integer(arr)
     arr.each do |i|
         x = arr.count(i)
         h["#{i}"] = "#{x}"
+        max = h.values.max
+        output_hash = Hash[h.select { |k, v| v == max}]
+        puts output_hash
     end
-    return h.max_by{|k,v| v}[0] ##key--integer; value--quantity
 end
