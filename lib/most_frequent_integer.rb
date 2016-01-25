@@ -13,7 +13,9 @@ def find_most_frequent_integer(arr)
     k = output_hash.keys.uniq
     if k.count > 1
         return nil
+    elsif k.empty? 
+        return nil
     else
-        return k
+        return k.join('').to_i
     end
  end
