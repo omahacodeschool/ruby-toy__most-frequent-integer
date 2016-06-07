@@ -3,5 +3,19 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-  # put your code here
+ arr = arr.sort
+ 	totals = Hash.new(0)
+ 	mode = []
+ 	arr.each do |x|
+ 		totals[x] += 1
+ 	end
+	totals.each do |k,v|
+ 		if v == totals.values.max
+ 			mode.push(k)
+ 		end
+ 	end
+ 	if mode.count > 1
+ 		nil
+ 	else return mode[0]
+ 	end
 end
