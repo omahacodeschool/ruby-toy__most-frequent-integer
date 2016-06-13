@@ -3,5 +3,33 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-  # put your code here
+    
+    
+    topvar = nil
+    newcounter = 0
+    topcounter = 0
+    x = 0
+    arrsort = arr.sort
+    
+    
+    while x < arrsort.length
+    
+        if arrsort[x] == arrsort[x + 1]
+            
+            newcounter += 1
+            
+            
+                if newcounter == topcounter
+                    topvar = nil
+                    
+                elsif newcounter > topcounter
+                    topvar = arrsort[x]
+                    topcounter = newcounter
+                end
+        else
+            newcounter = 0
+        end
+        x +=1
+    end
+    return topvar
 end
