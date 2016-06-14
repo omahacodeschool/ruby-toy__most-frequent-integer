@@ -13,4 +13,17 @@ def find_most_frequent_integer(arr)
 #If the value is unique, return its key
 #Else return nil
 
+new_hash = {}
+arr.each do |x|
+    new_hash[x] = 0 if new_hash[x].nil?
+    new_hash[x] = new_hash[x] + 1
+end
+new_hash2 = {}
+new_hash2 = new_hash.select{|k,v| v == new_hash.values.max}
+
+if new_hash2.length == 1
+    return new_hash2.key(2)
+else
+    return nil
+end
 end
