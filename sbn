@@ -19,6 +19,7 @@ else
         a = integer_frequency.index { |i| i === integer_frequency.max }
         mode = unique_integers[a]  
     end
+#puts top_two
 puts mode
 end
 

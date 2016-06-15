@@ -5,9 +5,8 @@
 def find_most_frequent_integer(arr)
     array = arr.sort
     unique_integers = array.uniq
-    if array === unique_integers
-    elsif arr.length < 2
-        mode = []
+    if array === unique_integers 
+        return nil
     else
         integer_frequency = []
         top_two = []
@@ -17,12 +16,12 @@ def find_most_frequent_integer(arr)
         end
         top_two = integer_frequency.max(2)
         if top_two[0] === top_two[1]
-            mode = []
+            return nil
         else
             a = []
             a = integer_frequency.index { |i| i === integer_frequency.max }
-            mode = unique_integers[a]  
+            mode = unique_integers[a] 
+            return mode
         end
     end
-    return mode
 end
