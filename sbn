@@ -1,0 +1,31 @@
+arr = [1, 1, 2, 2, 3]
+array = arr.sort
+unique_integers = array.uniq
+mode = []
+if array === unique_integers
+    mode = []
+else
+    integer_frequency = []
+    top_two = []
+    unique_integers.each do |i|
+        array.count(i)
+        integer_frequency << array.count(i)
+    end
+    top_two = integer_frequency.max(2)
+    if top_two[0] === top_two[1]
+        mode = []
+    else
+        a = []
+        a = integer_frequency.index { |i| i === integer_frequency.max }
+        mode = unique_integers[a]  
+    end
+puts mode
+end
+
+
+        
+# most_frequent = array.max(5) { |a, b| a <=> b }
+#puts unique_integers
+#puts integer_frequency
+#end
+
