@@ -22,7 +22,7 @@ new_hash2 = {}
 new_hash2 = new_hash.select{|k,v| v == new_hash.values.max}
 
 if new_hash2.length == 1
-    return new_hash2.key(2)
+    return new_hash2.first[0]
 else
     return nil
 end
