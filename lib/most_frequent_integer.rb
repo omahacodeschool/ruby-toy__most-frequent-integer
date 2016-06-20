@@ -7,9 +7,9 @@ def find_most_frequent_integer(arr)
     hashld = Hash.new 0
     
     #2. Loop through each array element, count them, and insert the final key/value combo into the hashld hash.
-        arr.each do |ele|
-    	    hashld[ele] += 1
-        end
+    arr.each do |ele|
+        hashld[ele] += 1
+    end
     
     #3. Hold max count in variable.
     maxd = hashld.values.max
