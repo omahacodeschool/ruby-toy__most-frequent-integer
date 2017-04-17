@@ -3,5 +3,15 @@
 # exists, return nil.
 
 def find_most_frequent_integer(arr)
-  # put your code here
+    collect = Hash.new 0
+   
+    arr.each do |int|
+       collect[int] += 1
+    end
+    
+    if collect.select {|k,v| v == collect.values.max}.count > 1
+        nil
+    else
+        collect.key(collect.values.max)
+    end
 end
